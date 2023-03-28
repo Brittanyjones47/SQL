@@ -1,0 +1,31 @@
+CREATE TABLE Brittanys_Closet (id INTEGER PRIMARY KEY, Item TEXT, Color TEXT, Price INTEGER, Quantity INTEGER);
+
+INSERT INTO Brittanys_Closet VALUES (1, "YSL Purse", "Cream", "1500", "1");
+INSERT INTO Brittanys_Closet VALUES (2, "YSL Purse", "Black", "2300", "1");
+INSERT INTO Brittanys_Closet VALUES (3, "Gucci Platform Monogram Sandals", "Tan", "750", "1");
+INSERT INTO Brittanys_Closet VALUES (4, "Gucci Monogram Pool Slides", "Multicolor", "230", "1");
+INSERT INTO Brittanys_Closet VALUES (5, "Gucci Monogram Mini Purse", "Brown", "900", "1");
+INSERT INTO Brittanys_Closet VALUES (6, "Gucci Monogram Tennis Shoes", "Multicolor", "750", "1");
+INSERT INTO Brittanys_Closet VALUES (7, "Dior Padded Slides", "Black", "800", "1");
+INSERT INTO Brittanys_Closet VALUES (8, "Yeezy 350", "Black/Red", "250", "1");
+INSERT INTO Brittanys_Closet VALUES (9, "Yeezy 350", "Grey/Orange", "250", "1");
+INSERT INTO Brittanys_Closet VALUES (10, "Yeezy 500", "Cream", "250", "1");
+INSERT INTO Brittanys_Closet VALUES (11, "Yeezy 700", "Grey", "300", "1");
+INSERT INTO Brittanys_Closet VALUES (12, "Yeezy Foam Runner", "Grey/Cream", "250", "1");
+INSERT INTO Brittanys_Closet VALUES (13, "Balenciaga Hour Glass Bag", "Pink", "2300", "1");
+INSERT INTO Brittanys_Closet VALUES (14, "Dior Monogram Mini Wallet", "Navy", "1650", "1");
+INSERT INTO Brittanys_Closet VALUES (15, "Balenciaga Runner Sneaker", "Silver", "1250", "1");
+SELECT * FROM Brittanys_Closet;
+
+--display the database ordered by price. 
+SELECT * FROM store
+ORDER BY price desc; 
+
+--what is the avg price of items? 
+SELECT AVG(price) "price"
+FROM Brittanys_closet; 
+
+--how many groups are there, if grouped by color? 
+SELECT item, color
+FROM Brittanys_Closet
+GROUP by Color
